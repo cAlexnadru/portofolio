@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 transition-colors duration-300;
+  }
+}
+
+.project-body h1 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 leading-tight;
+}
+.project-body h2 {
+  @apply text-xl md:text-2xl font-medium mt-10 mb-4;
+}
+.project-body p {
+  @apply text-neutral-500 dark:text-neutral-400 text-base md:text-lg mb-5 leading-relaxed;
+}
+.project-body ul {
+  @apply text-neutral-500 dark:text-neutral-400 text-base md:text-lg mb-5 pl-6 list-disc;
+}
+.project-body li {
+  @apply mb-2;
+}
+.project-body figure {
+  @apply my-8;
+}
+.project-body img {
+  @apply w-full h-auto rounded-lg border border-neutral-200 dark:border-neutral-800 block bg-neutral-100 dark:bg-neutral-900 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-xl cursor-zoom-in;
+}
+.project-body figcaption {
+  @apply text-sm text-neutral-500 dark:text-neutral-400 mt-2 text-center;
+}
+.project-body blockquote {
+  @apply border-l-4 border-purple-700 dark:border-cyan-400 pl-6 my-8 text-lg text-neutral-900 dark:text-neutral-100 italic;
+}
